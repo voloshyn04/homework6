@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        function checkNumber(number) {
+
+            const allDigitsEqual = number[0] === number[1] && number[1] === number[2];   // Перевірка, чи всі цифри однакові
+
+
+            const anyDigitsEqual = number[0] === number[1] || number[1] === number[2] || number[0] === number[2];    // Перевірка, чи є серед цифр цифри однакові
+
+
+            return [allDigitsEqual, anyDigitsEqual];   // Повертаємо результати обох перевірок
+        }
+
+        const userNumber = prompt("Введіть тризначне число:");
+        const results = checkNumber(userNumber);
+
+        if (results[0]) {
+            console.log("Всі цифри однакові");
+        } else {
+            console.log("Не всі цифри однакові");
+        }
+
+        if (results[1]) {
+            console.log("Серед цифр є однакові");
+        } else {
+            console.log("Серед цифр немає однакових");
+        }
+
+
+
+    </script>
+
+    <title>Homework 6 Voloshyn</title>
+
+
+</head>
+<body>
+
+</body>
+</html>
